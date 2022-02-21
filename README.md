@@ -627,6 +627,47 @@ return 0;<br>
  
  #include<iostream><br>
 using namespace std;<br>
+
+int main()<br>
+{<br>
+	int size, i, arr1[10], arr2[10], add[10];<br>
+	
+	cout << "\nPlease Enter the Array Size =  ";<br>
+	cin >> size;<br>
+	
+	cout << "\nPlease Enter the First Array Items =  ";<br>
+	for(i = 0; i < size; i++)<br>
+	{<br>
+		cin >> arr1[i];<br>
+	}<br>
+	cout << "\nPlease Enter the Second Array Items =  ";<br>
+	for(i = 0; i < size; i++)<br>
+	{<br>
+		cin >> arr2[i];<br>
+	}<br>
+	for(i = 0; i < size; i++)<br>
+	{<br>
+		add[i] = arr1[i] + arr2[i];<br>
+		cout << arr1[i] << " + " << arr2[i] << " = " << add[i] << "\n";<br>
+	}<br>
+	cout << "\nThe Final Result of adding 2 One Dimensional Arrays = ";<br>
+	for(i = 0; i < size; i++)<br>
+	{<br>
+		cout << add[i] << " ";<br>
+	}<br>
+
+ 	return 0;<br>
+}<br>
+ 
+**OUTPUT**
+ 
+ ![image](https://user-images.githubusercontent.com/97940851/154903703-22a58b67-94d3-4fc3-9aab-5a91241f2755.png)
+
+
+ **4.Write a program to implement reverse order of the array element** 
+ 
+ #include<iostream><br>
+using namespace std;<br>
 int main()<br>
 {<br>
     int arr[10], i;<br>
