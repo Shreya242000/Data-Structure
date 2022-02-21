@@ -622,4 +622,29 @@ return 0;<br>
 **OUTPUT**
  
 ![image](https://user-images.githubusercontent.com/97940851/154901341-b3bf959b-3c9b-41f3-abde-d171778d1f2f.png)
+ 
+ **3.Write a program to implement addition of two arrays.**
+ 
+ #include<iostream><br>
+using namespace std;<br>
+int main()<br>
+{<br>
+    int arr[10], i;<br>
+    cout<<"Enter 10 Array Elements: ";<br>
+    for(i=0; i<10; i++)<br>
+        cin>>arr[i];<br>
+    cout<<"\nThe Original Array is:\n";<br>
+    for(i=0; i<10; i++)<br>
+        cout<<arr[i]<<" ";<br>
+    cout<<"\n\nThe Reverse of Given Array is:\n";<br>
+    for(i=(10-1); i>=0; i--)<br>
+        cout<<arr[i]<<" ";<br>
+    cout<<endl;<br>
+    return 0;<br>
+}<br>
+ 
+ **OUTPUT**
+ 
+ ![image](https://user-images.githubusercontent.com/97940851/154902823-566a161a-5e6b-4b2f-9f77-98bf022817d7.png)
+
 
