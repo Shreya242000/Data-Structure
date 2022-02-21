@@ -540,12 +540,6 @@ void single_llist::display()<br>
 
  ![image](https://user-images.githubusercontent.com/97940851/154899887-33950d30-bdfa-4591-9ce4-8d0682b19948.png)
  
- ![image](https://user-images.githubusercontent.com/97940851/154899956-3aee1c81-621d-4f0c-ba3e-f8b8a681b8ff.png)
- 
- ![image](https://user-images.githubusercontent.com/97940851/154899994-d1abc618-93db-42a1-90e0-4eba88b43946.png)
-
-
-
-
+ ![image](https://user-images.githubusercontent.com/97940851/154900328-97ce57e1-26f3-4d36-bc09-746ec4d72bf6.png)
 
 
