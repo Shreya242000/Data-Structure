@@ -523,3 +523,21 @@ void single_llist::display()<br>
  }<br> 
 }<br>
 
+ 
+**OUTPUT**
+ 
+![image](https://user-images.githubusercontent.com/97940851/154899104-9aa4e4f1-b17c-4171-a1f7-af8f78132c0d.png)
+
+ ![image](https://user-images.githubusercontent.com/97940851/154899206-d03f59ee-9be5-4288-a275-6225cf519e97.png)
+
+ ![image](https://user-images.githubusercontent.com/97940851/154899306-2e0adfda-5d8d-4088-8ecb-9a6b702aa72e.png)
+ 
+ ![image](https://user-images.githubusercontent.com/97940851/154899369-29738618-3ba1-4c8e-8d72-e5de39d83384.png)
+ 
+ ![image](https://user-images.githubusercontent.com/97940851/154899432-bf483aab-0000-4138-95a3-e16cff6a3bc1.png)
+ 
+ ![image](https://user-images.githubusercontent.com/97940851/154899485-94a182ca-f4a0-4ffd-bd7c-85065497fd15.png)
+
+
+
+
