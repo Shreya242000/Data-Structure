@@ -757,6 +757,9 @@ int main()<br>
  **OUTPUT**
  
  ![image](https://user-images.githubusercontent.com/97940851/154905342-e637c52a-34a4-4c49-a4cc-15653805d210.png)
+	
+	
+**6.Construct the binary search tree for given elements**
 
 
 
