@@ -1157,6 +1157,56 @@ int main() {<br>
 **OUTPUT**
 		      
 ![image](https://user-images.githubusercontent.com/97940851/155929160-5b40e0bd-20d8-4823-b31f-c9b9d4e4eeb8.png)
+	
+	
+**Write a program to implement maximum heap sort**
+
+#include <iostream>
+using namespace std;
+void max_heap(int *a, int m, int n) {
+   int j, t;
+   t = a[m];
+   j = 2 * m;
+   while (j <= n) {
+      if (j < n && a[j+1] > a[j])
+         j = j + 1;
+      if (t > a[j])
+         break;
+      else if (t <= a[j]) {
+         a[j / 2] = a[j];
+         j = 2 * j;
+      }
+   }
+   a[j/2] = t;
+   return;
+}
+void build_maxheap(int *a,int n) {
+   int k;
+   for(k = n/2; k >= 1; k--) {
+      max_heap(a,k,n);
+   } 
+}
+int main() {
+   int n, i;
+   cout<<"enter no of elements of array\n";
+   cin>>n;
+   int a[30];
+   for (i = 1; i <= n; i++) {
+      cout<<"enter elements"<<" "<<(i)<<endl;
+      cin>>a[i];
+   }
+   build_maxheap(a,n);
+   cout<<"Max Heap\n";
+   for (i = 1; i <= n; i++) {
+      cout<<a[i]<<endl;
+   }
+}	
+	
+	
+**OUTPUT**
+	
+![image](https://user-images.githubusercontent.com/97940851/155932317-7595078e-cfe7-4c54-82ed-6b4e74762598.png)
+
 		       
 	
 
