@@ -1155,9 +1155,9 @@ int main() {<br>
 }<br>
 		  
 **OUTPUT**
-		      
-![image](https://user-images.githubusercontent.com/97940851/155929160-5b40e0bd-20d8-4823-b31f-c9b9d4e4eeb8.png)
-	
+
+![image](https://user-images.githubusercontent.com/97940851/156982059-7ea48fff-176c-41b8-8b34-9b76c74d9765.png)
+
 	
 **Write a program to implement maximum heap**
 
@@ -1205,5 +1205,5 @@ int main() {<br>
 	
 **OUTPUT**
 	
-![image](https://user-images.githubusercontent.com/97940851/155932317-7595078e-cfe7-4c54-82ed-6b4e74762598.png)
-	
+![image](https://user-images.githubusercontent.com/97940851/156982742-13693ab1-cf7b-49f9-b7fe-77f2ab5a4d5c.png)
+
