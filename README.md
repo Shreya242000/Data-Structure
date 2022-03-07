@@ -1205,5 +1205,4 @@ int main() {<br>
 	
 **OUTPUT**
 	
-![image](https://user-images.githubusercontent.com/97940851/156982742-13693ab1-cf7b-49f9-b7fe-77f2ab5a4d5c.png)
-
+![image](https://user-images.githubusercontent.com/97940851/156982893-d0c3f3d1-1293-4cd2-b4b5-2159b27b3902.png)
