@@ -1109,7 +1109,7 @@ void BST::display(node *ptr, int level)<br>
 ![image](https://user-images.githubusercontent.com/97940851/155076155-c89b840e-5da9-4dbb-8fad-1b7affc91da7.png)
 	
 
-**Write a program implementing miniumum heap sort**	
+**Write a program implementing miniumum heap**	
 
 #include <iostream><br>
 #include <conio.h><br>
@@ -1159,7 +1159,7 @@ int main() {<br>
 ![image](https://user-images.githubusercontent.com/97940851/155929160-5b40e0bd-20d8-4823-b31f-c9b9d4e4eeb8.png)
 	
 	
-**Write a program to implement maximum heap sort**
+**Write a program to implement maximum heap**
 
 #include <iostream><br>
 using namespace std;<br>
@@ -1206,15 +1206,4 @@ int main() {<br>
 **OUTPUT**
 	
 ![image](https://user-images.githubusercontent.com/97940851/155932317-7595078e-cfe7-4c54-82ed-6b4e74762598.png)
-
-		       
 	
-
-
-
-
-
-
-
-
-
