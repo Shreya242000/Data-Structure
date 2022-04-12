@@ -1384,9 +1384,9 @@ void MergeSort(int *a, int low, int high)<br>
 	if (low < high)<br>
 	{<br>
 		mid=(low+high)/2;<br>
-			MergeSort(a, low, mid);<br>
-		              MergeSort(a, mid+1, high);<br>
-			Merge(a, low, high, mid);<br>
+	        MergeSort(a, low, mid);<br>
+		MergeSort(a, mid+1, high);<br>
+	        Merge(a, low, high, mid);<br>
 	}<br>
 }<br>
 int main()<br>
@@ -1402,11 +1402,11 @@ int main()<br>
 		cin>>arr[i];<br>
 	}<br>
           MergeSort(arr, 0, n-1);<br>
-		cout<<"\nSorted Data ";<br>
-	           for (i = 0; i < n; i++)<br>
-                         cout<<"->"<<arr[i];<br>
+	  cout<<"\nSorted Data ";<br>
+	  for (i = 0; i < n; i++)<br>
+          cout<<"->"<<arr[i];<br>
  
-	       getch();<br>
+	  getch();<br>
 }<br>
 					    
 **OUTPUT**
