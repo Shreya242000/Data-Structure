@@ -1674,4 +1674,17 @@ void double_llist::add_after(int value, int pos)
 }
 
 **OUTPUT**
+![image](https://user-images.githubusercontent.com/97940851/163158588-ac272929-9123-48b6-a3f3-985dab283e3f.png)
+
+![image](https://user-images.githubusercontent.com/97940851/163158632-88c8b4b5-8b2f-43e4-8d2b-40e6083acfaf.png)
+	
+![image](https://user-images.githubusercontent.com/97940851/163158721-ee856b26-f0e3-4939-8820-680001504ad9.png)
+
+![image](https://user-images.githubusercontent.com/97940851/163158818-aa639f17-3f7d-485b-93a6-ded079f69142.png)
+	
+![image](https://user-images.githubusercontent.com/97940851/163158868-be928ce5-f8a7-4ce4-832f-99efec148d88.png)
+	
+
+
+
 
