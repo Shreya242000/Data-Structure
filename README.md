@@ -1416,143 +1416,143 @@ int main()<br>
 	
 **create a program to compute doubly linked list**
 	
-#include<iostream>
-#include<cstdio>
-#include<cstdlib>
-using namespace std;
-struct node
-{
-    int info;
-    struct node *next;
-    struct node *prev;
-}*start;
-class double_llist
-{
-    public:
-        void create_list(int value);
-        void add_begin(int value);
-        void add_after(int value, int position);
-        void delete_element(int value);
-        void search_element(int value);
-        void display_dlist();
-        void count();
-        void reverse();
-        double_llist()
-        {
-            start = NULL;  
-        }
-};
- int main()
-{
-    int choice, element, position;
-    double_llist dl;
-    while (1)
-    {
-        cout<<endl<<"----------------------------"<<endl;
-        cout<<endl<<"Operations on Doubly linked list"<<endl;
-        cout<<endl<<"----------------------------"<<endl;        
-        cout<<"1.Create Node"<<endl;
-        cout<<"2.Add at begining"<<endl;
-        cout<<"3.Add after position"<<endl;
-        cout<<"4.Delete"<<endl;
-        cout<<"5.Display"<<endl;
-        cout<<"6.Count"<<endl;
-        cout<<"7.Reverse"<<endl;
-        cout<<"8.Quit"<<endl;
-        cout<<"Enter your choice : ";
-        cin>>choice;
-        switch ( choice )
-        {
-        case 1:
-            cout<<"Enter the element: ";
-            cin>>element;
-            dl.create_list(element);
-            cout<<endl;
-            break;
-        case 2:
-            cout<<"Enter the element: ";
-            cin>>element;
-            dl.add_begin(element);
-            cout<<endl;
-            break;
-        case 3:
-            cout<<"Enter the element: ";
-            cin>>element;
-            cout<<"Insert Element after postion: ";
-            cin>>position;
-            dl.add_after(element, position);
-            cout<<endl;
-            break;
-        case 4:
-            if (start == NULL)
-            {                      
-                cout<<"List empty,nothing to delete"<<endl;  
-                break;
-            }
-            cout<<"Enter the element for deletion: ";
-            cin>>element;
-            dl.delete_element(element);
-            cout<<endl;
-            break;
-        case 5:
-            dl.display_dlist();
-            cout<<endl;
-            break;
-        case 6:
-            dl.count();
-            break;    
-        case 7:
-            if (start == NULL)
-            {
-                cout<<"List empty,nothing to reverse"<<endl;
-                break;
-            }
-            dl.reverse();
-            cout<<endl;
-            break;
-        case 8:
-            exit(1);
-        default:
-            cout<<"Wrong choice"<<endl;
-        }
-    }
-    return 0;
-}
- void double_llist::create_list(int value)
-{
-    struct node *s, *temp;
-    temp = new(struct node);
-    temp->info = value;
-    temp->next = NULL;
-    if (start == NULL)
-    {
-        temp->prev = NULL;
-        start = temp;
-    }
-    else
-    {
-        s = start;
-        while (s->next != NULL)
-            s = s->next;
-        s->next = temp;
-        temp->prev = s;
-    }
-}
- void double_llist::add_begin(int value)
-{
-    if (start == NULL)
-    {
-        cout<<"First Create the list."<<endl;
-        return;
-    }
-    struct node *temp;
-    temp = new(struct node);
-    temp->prev = NULL;
-    temp->info = value;
-    temp->next = start;
-    start->prev = temp;
-    start = temp;
-    cout<<"Element Inserted"<<endl;
+#include<iostream><br>
+#include<cstdio><br>
+#include<cstdlib><br>
+using namespace std;<br>
+struct node<br>
+{<br>
+    int info;<br>
+    struct node *next;<br>
+    struct node *prev;<br>
+}*start;<br>
+class double_llist<br>
+{<br>
+    public:<br>
+        void create_list(int value);<br>
+        void add_begin(int value);<br>
+        void add_after(int value, int position);<br>
+        void delete_element(int value);<br>
+        void search_element(int value);<br>
+        void display_dlist();<br>
+        void count();<br>
+        void reverse();<br>
+        double_llist()<br>
+        {<br>
+            start = NULL;<br>  
+        }<br>
+};<br>
+ int main()<br>
+{<br>
+    int choice, element, position;<br>
+    double_llist dl;<br>
+    while (1)<br>
+    {<br>
+        cout<<endl<<"----------------------------"<<endl;<br>
+        cout<<endl<<"Operations on Doubly linked list"<<endl;<br>
+        cout<<endl<<"----------------------------"<<endl;<br>        
+        cout<<"1.Create Node"<<endl;<br>
+        cout<<"2.Add at begining"<<endl;<br>
+        cout<<"3.Add after position"<<endl;<br>
+        cout<<"4.Delete"<<endl;<br>
+        cout<<"5.Display"<<endl;<br>
+        cout<<"6.Count"<<endl;<br>
+        cout<<"7.Reverse"<<endl;<br>
+        cout<<"8.Quit"<<endl;<br>
+        cout<<"Enter your choice : ";<br>
+        cin>>choice;<br>
+        switch ( choice )<br>
+        {<br>
+        case 1:<br>
+            cout<<"Enter the element: ";<br>
+            cin>>element;<br>
+            dl.create_list(element);<br>
+            cout<<endl;<br>
+            break;<br>
+        case 2:<br>
+            cout<<"Enter the element: ";<br>
+            cin>>element;<br>
+            dl.add_begin(element);<br>
+            cout<<endl;<br>
+            break;<br>
+        case 3:<br>
+            cout<<"Enter the element: ";<br>
+            cin>>element;<br>
+            cout<<"Insert Element after postion: ";<br>
+            cin>>position;<br>
+            dl.add_after(element, position);<br>
+            cout<<endl;<br>
+            break;<br>
+        case 4:<br>
+            if (start == NULL)<br>
+            {<br>                      
+                cout<<"List empty,nothing to delete"<<endl;<br>  
+                break;<br>
+            }<br>
+            cout<<"Enter the element for deletion: ";<br>
+            cin>>element;<br>
+            dl.delete_element(element);<br>
+            cout<<endl;<br>
+            break;<br>
+        case 5:<br>
+            dl.display_dlist();<br>
+            cout<<endl;<br>
+            break;<br>
+        case 6:<br>
+            dl.count();<br>
+            break;<br>    
+        case 7:<br>
+            if (start == NULL)<br>
+            {<br>
+                cout<<"List empty,nothing to reverse"<<endl;<br>
+                break;<br>
+            }<br>
+            dl.reverse();<br>
+            cout<<endl;<br>
+            break;<br>
+        case 8:<br>
+            exit(1);<br>
+        default:<br>
+            cout<<"Wrong choice"<<endl;<br>
+        }<br>
+    }<br>
+    return 0;<br>
+}<br>
+ void double_llist::create_list(int value)<br>
+{<br>
+    struct node *s, *temp;<br>
+    temp = new(struct node);<br>
+    temp->info = value;<br>
+    temp->next = NULL;<br>
+    if (start == NULL)<br>
+    {<br>
+        temp->prev = NULL;<br>
+        start = temp;<br>
+    }<br>
+    else<br>
+    {<br>
+        s = start;<br>
+        while (s->next != NULL)<br>
+            s = s->next;<br>
+        s->next = temp;<br>
+        temp->prev = s;<br>
+    }<br>
+}<br>
+ void double_llist::add_begin(int value)<br>
+{<br>
+    if (start == NULL)<br>
+    {<br>
+        cout<<"First Create the list."<<endl;<br>
+        return;<br>
+    }<br>
+    struct node *temp;<br>
+    temp = new(struct node);<br>
+    temp->prev = NULL;<br>
+    temp->info = value;<br>
+    temp->next = start;<br>
+    start->prev = temp;<br>
+    start = temp;<br>
+    cout<<"Element Inserted"<<endl;<br>
 }
 void double_llist::add_after(int value, int pos)
 {
