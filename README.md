@@ -1795,6 +1795,12 @@ return 0;
 ![image](https://user-images.githubusercontent.com/97940851/165030684-b9a12254-874d-4827-8ba9-4b46474a499f.png)
 							      
 							      
+**Find the minimum cost spanning tree of a given undirected graph using Kruskal’s Algorithm.**	
+							      
+![image](https://user-images.githubusercontent.com/97940851/165035075-721c1230-8167-4660-b3dd-2e8826d33ca4.png)
+							      
+							      
+							      
 
 
 
