@@ -1742,53 +1742,53 @@ int main()<br>
 	
 **Find the minimum cost spanning tree of a given weighted undirected graph using Prim’s Algorithm.**
 
-#include <bits/stdc++.h>
-using namespace std;
-#define V 5
-int minKey(int key[], bool mstSet[])
-{
-int min = INT_MAX, min_index;
-for (int v = 0; v < V; v++)
-if (mstSet[v] == false && key[v] < min)
-min = key[v], min_index = v;
-return min_index;
-}
-void printMST(int parent[], int graph[V][V])
-{
-cout<<"Edge \tWeight\n";
-for (int i = 1; i < V; i++)
-cout<<parent[i]<<" - "<<i<<" \t"<<graph[i][parent[i]]<<" \n";
-}
+#include <bits/stdc++.h><br>
+using namespace std;<br>
+#define V 5<br>
+int minKey(int key[], bool mstSet[])<br>
+{<br>
+int min = INT_MAX, min_index;<br>
+for (int v = 0; v < V; v++)<br>
+if (mstSet[v] == false && key[v] < min)<br>
+min = key[v], min_index = v;<br>
+return min_index;<br>
+}<br>
+void printMST(int parent[], int graph[V][V])<br>
+{<br>
+cout<<"Edge \tWeight\n";<br>
+for (int i = 1; i < V; i++)<br>
+cout<<parent[i]<<" - "<<i<<" \t"<<graph[i][parent[i]]<<" \n";<br>
+}<br>
 
-void primMST(int graph[V][V])
-{
-int parent[V];
-int key[V];
-bool mstSet[V];
-for (int i = 0; i < V; i++)
-key[i] = INT_MAX, mstSet[i] = false;
-key[0] = 0;
-parent[0] = -1; // First node is always root of MST
-for (int count = 0; count < V - 1; count++)
-{
-int u = minKey(key, mstSet);
-mstSet[u] = true;
-for (int v = 0; v < V; v++)
-if (graph[u][v] && mstSet[v] == false && graph[u][v] < key[v])
-parent[v] = u, key[v] = graph[u][v];
-}
-printMST(parent, graph);
-}
-int main()
-{
-int graph[V][V] = { { 0, 2, 0, 6, 0 },
-{ 2, 0, 3, 8, 5 },
-{ 0, 3, 0, 0, 7 },
-{ 6, 8, 0, 0, 9 },
-{ 0, 5, 7, 9, 0 } };
-primMST(graph);
-return 0;
-}
+void primMST(int graph[V][V])<br>
+{<br>
+int parent[V];<br>
+int key[V];<br>
+bool mstSet[V];<br>
+for (int i = 0; i < V; i++)<br>
+key[i] = INT_MAX, mstSet[i] = false;<br>
+key[0] = 0;<br>
+parent[0] = -1; // First node is always root of MST<br>
+for (int count = 0; count < V - 1; count++)<br>
+{<br>
+int u = minKey(key, mstSet);<br>
+mstSet[u] = true;<br>
+for (int v = 0; v < V; v++)<br>
+if (graph[u][v] && mstSet[v] == false && graph[u][v] < key[v])<br>
+parent[v] = u, key[v] = graph[u][v];<br>
+}<br>
+printMST(parent, graph);<br>
+}<br>
+int main()<br>
+{<br>
+int graph[V][V] = { { 0, 2, 0, 6, 0 },<br>
+{ 2, 0, 3, 8, 5 },<br>
+{ 0, 3, 0, 0, 7 },<br>
+{ 6, 8, 0, 0, 9 },<br>
+{ 0, 5, 7, 9, 0 } };<br>
+primMST(graph);<br>
+return 0;<br>
+}<br>
 							      
 **OUTPUT**	
 
@@ -1799,6 +1799,104 @@ return 0;
 							      
 ![image](https://user-images.githubusercontent.com/97940851/165035075-721c1230-8167-4660-b3dd-2e8826d33ca4.png)
 							      
+**Write a C++ program for to implement BFS for undirected graph.**
+
+#include<iostream>
+#include<conio.h>
+#include<stdlib.h>
+using namespace std;
+ int cost[10][10],qu[10],front,rare,visit[10],visited[10];
+int main()
+{
+
+   int m,n,j,i,v,k;
+    cout <<"Enter no of vertices:";
+    cin >> n;
+    cout <<"Enter no of edges:";
+    cin >> m;
+    cout <<"\nEDGES \n";
+    for(k=1; k<=m; k++)
+    {
+        cin >>i>>j;
+        cost[i][j]=1;
+    }
+    cout <<"Enter initial vertex to traverse from:";
+    cin >>v;
+    cout <<"Visitied vertices:";
+    cout <<v<<" ";
+    visited[v]=1;
+    k=1;
+    while(k<n)
+    {
+        for(j=1; j<=n; j++)
+            if(cost[v][j]!=0 && visited[j]!=1 && visit[j]!=1)
+            {
+                visit[j]=1;
+                qu[rare++]=j;
+            }
+        v=qu[front++];
+        cout<<v <<" ";
+        k++;
+        visit[v]=0;
+        visited[v]=1;
+    }
+    return 0;
+}
+	
+**OUTPUT**
+
+	
+	
+	
+	
+	
+	
+	
+**Write a C++ program for to implement DFS for undirected graph.**
+
+#include<iostream>
+#include<conio.h>
+#include<stdlib.h>
+using namespace std;
+int cost[10][10],i,j,k,n,stk[10],top,v,visit[10],visited[10];
+int main()
+{
+    int m;
+    cout <<"Enter no of vertices:";
+    cin >> n;
+    cout <<"Enter no of edges:";
+    cin >> m;
+    cout <<"\nEDGES \n";
+    for(k=1; k<=m; k++)
+    {
+        cin >>i>>j;
+        cost[i][j]=1;
+    }
+    cout <<"Enter initial vertex to traverse from:";
+    cin >>v;
+    cout <<"DFS ORDER OF VISITED VERTICES:";
+    cout << v <<" ";
+    visited[v]=1;
+    k=1;
+    while(k<n)
+    {
+        for(j=n; j>=1; j--)
+            if(cost[v][j]!=0 && visited[j]!=1 && visit[j]!=1)
+            {
+                visit[j]=1;
+                stk[top]=j;
+                top++;
+            }
+        v=stk[--top];
+        cout<<v << " ";
+        k++;
+        visit[v]=0;
+        visited[v]=1;
+    }
+    return 0;
+}
+
+
 							      
 							      
 
