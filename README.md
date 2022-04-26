@@ -1796,6 +1796,104 @@ return 0;<br>
 							      
 							      
 **Find the minimum cost spanning tree of a given undirected graph using Kruskal’s Algorithm.**	
+
+#include<bits/stdc++.h><br>
+using namespace std;<br>
+typedef pair<int, int> iPair;<br>
+struct Graph<br>
+{<br>
+int V, E;<br>
+vector< pair<int, iPair> > edges;<br>
+Graph(int V, int E)<br><br>
+{<br>
+this->V = V;<br>
+this->E = E;<br>
+}<br>
+void addEdge(int u, int v, int w)<br>
+{<br>
+edges.push_back({w, {u, v}});<br>
+}<br>
+int kruskalMST();<br>
+};<br>
+
+struct DisjointSets<br>
+{<br>
+int *parent, *rnk;<br>
+int n;<br>
+DisjointSets(int n)<br>
+{<br>
+this->n = n;<br>
+parent = new int[n+1];<br>
+rnk = new int[n+1];<br>
+for (int i = 0; i <= n; i++)<br>
+{<br>
+rnk[i] = 0;<br>
+parent[i] = i;<br>
+}<br><br>
+}<br>
+int find(int u)<br>
+{<br>
+if (u != parent[u])<br>
+parent[u] = find(parent[u]);<br>
+return parent[u];<br>
+}<br>
+void merge(int x, int y)<br>
+{<br>
+x = find(x), y = find(y);<br>
+if (rnk[x] > rnk[y])<br>
+parent[y] = x;<br>
+else // If rnk[x] <= rnk[y]<br>
+parent[x] = y;<br>
+if (rnk[x] == rnk[y])<br>
+rnk[y]++;<br>
+}<br>
+};<br>
+int Graph::kruskalMST()<br>
+{<br>
+int mst_wt = 0; <br>
+sort(edges.begin(), edges.end());<br>
+DisjointSets ds(V);<br>
+vector< pair<int, iPair> >::iterator it;<br>
+for (it=edges.begin(); it!=edges.end(); it++)<br>
+{<br>
+int u = it->second.first;<br>
+int v = it->second.second;<br>
+int set_u = ds.find(u);<br>
+int set_v = ds.find(v);<br>
+if (set_u != set_v)<br>
+{<br>
+cout << u << " - " << v << endl;<br>
+mst_wt += it->first;<br>
+ds.merge(set_u, set_v);<br>
+}<br>
+}<br>
+return mst_wt;<br>
+}<br>
+int main()<br>
+{<br>
+int V = 9, E = 14;<br>
+Graph g(V, E);<br>
+g.addEdge(0, 1, 4);<br>
+g.addEdge(0, 7, 8);<br>
+g.addEdge(1, 2, 8);<br>
+g.addEdge(1, 7, 11);<br>
+g.addEdge(2, 3, 7);<br>
+g.addEdge(2, 8, 2);<br>
+g.addEdge(2, 5, 4);<br>
+g.addEdge(3, 4, 9);<br><br>
+g.addEdge(3, 5, 14);<br>
+g.addEdge(4, 5, 10);<br>
+g.addEdge(5, 6, 2);<br>
+g.addEdge(6, 7, 1);<br>
+g.addEdge(6, 8, 6);<br>
+g.addEdge(7, 8, 7);<br>
+cout << "Edges of MST are \n";<br>
+int mst_wt = g.kruskalMST();<br>
+cout << "\nWeight of MST is " << mst_wt;<br>
+return 0;<br>
+}<br>
+
+**OUTPUT**
 							      
 ![image](https://user-images.githubusercontent.com/97940851/165035075-721c1230-8167-4660-b3dd-2e8826d33ca4.png)
 							      
@@ -1842,14 +1940,11 @@ int main()<br>
     }<br>
     return 0;<br>
 }<br>
-	<br>
+	
 **OUTPUT**
+	
+![image](https://user-images.githubusercontent.com/97940851/165233030-f31d9cc8-6509-4926-b41e-87d84c5af98f.png)
 
-	
-	
-	
-	
-	
 	
 	
 **Write a C++ program for to implement DFS for undirected graph.**
@@ -1895,6 +1990,10 @@ int main()<br>
     }<br>
     return 0;<br>
 }<br>
+
+**OUTPUT**
+	
+![image](https://user-images.githubusercontent.com/97940851/165233262-86596fbd-17cb-42b1-ac01-cf69bdb89c00.png)
 
 
 							      
