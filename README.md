@@ -1700,40 +1700,36 @@ void double_llist::add_after(int value, int pos)<br>
 using namespace std;<br>
 int main()<br>
 {<br>
-	int a[20],i,n,a1[20],a2[20],k1=0,k2=0,pos;<br>
-	cout<<"Enter the size of an array: "<<endl;<br>
-	cin>>n;<br>
-	cout<<"Enter array elements: "<<endl;<br>
-	for(i=0;i<n;i++)<br>
-	{<br>
-	cin>>a[i];<br>
-	}<br>
-	cout<<"Enter the position to split the array into 2"<<endl;<br>
-	cin>>pos;<br>
-	for(i=0;i<n;i++)<br>
-	{<br>
-		if(i<pos)<br>
-		a1[k1++]=a[i];<br>
-		else<br>
-		a2[k2++]=a[i];<br>
-	}<br>
-		cout<<"\nArray elements of array1 \n";<br>
-			for(i=0;i<k1;i++)<br>
-			{<br>
-				 
-                cout<<a1[i]<<endl;<br>
-			}<br>
+int a[20],i,n,a1[20],a2[20],k1=0,k2=0,pos;<br>
+cout<<"Enter the size of an array: "<<endl;<br>
+cin>>n;<br>
+cout<<"Enter array elements: "<<endl;<br>
+for(i=0;i<n;i++)<br>
+{<br>
+cin>>a[i];<br>
+}<br>
+cout<<"Enter the position to split the array into 2"<<endl;<br>
+cin>>pos;<br>
+for(i=0;i<n;i++)<br>
+{<br>
+if(i<pos)<br>
+a1[k1++]=a[i];<br>
+else<br>
+a2[k2++]=a[i];<br>
+}<br>
+cout<<"\nArray elements of array1 \n";<br>
+for(i=0;i<k1;i++)<br>
+{<br>
+cout<<a1[i]<<endl;<br>
+}<br>
 			
-			cout<<"\nArray elements of array2 \n";<br>
-			for(i=0;i<k2;i++)<br>
-			{<br>
-				 
-               cout<<a2[i]<<endl;<br>
-			}<br>
-		
-			cout<<"\n";<br>
-			return 0;<br>
-		}<br>
+cout<<"\nArray elements of array2 \n";<br>
+for(i=0;i<k2;i++)<br>
+{<br>
+ cout<<a2[i]<<endl;<br>
+}<br>
+cout<<"\n";<br>
+return 0;<br>}<br>
 			
 **OUTPUT**
 	
@@ -1907,38 +1903,38 @@ using namespace std;<br>
 int main()<br>
 {<br>
 <br>
-   int m,n,j,i,v,k;<br><br>
-    cout <<"Enter no of vertices:";<br><br>
-    cin >> n;<br><br>
-    cout <<"Enter no of edges:";<br><br>
-    cin >> m;<br><br>
-    cout <<"\nEDGES \n";<br>
-    for(k=1; k<=m; k++)<br>
-    {<br>
-        cin >>i>>j;<br>
-        cost[i][j]=1;<br>
-    }<br>
-    cout <<"Enter initial vertex to traverse from:";<br>
-    cin >>v;<br>
-    cout <<"Visitied vertices:";<br>
-    cout <<v<<" ";<br>
-    visited[v]=1;<br>
-    k=1;<br>
-    while(k<n)<br>
-    {<br>
-        for(j=1; j<=n; j++)<br>
-            if(cost[v][j]!=0 && visited[j]!=1 && visit[j]!=1)<br>
-            {<br>
-                visit[j]=1;<br>
-                qu[rare++]=j;<br>
-            }<br>
-        v=qu[front++];<br>
-        cout<<v <<" ";<br>
-        k++;<br>
-        visit[v]=0;<br>
-        visited[v]=1;<br>
-    }<br>
-    return 0;<br>
+ int m,n,j,i,v,k;<br><br>
+  cout <<"Enter no of vertices:";<br><br>
+  cin >> n;<br><br>
+  cout <<"Enter no of edges:";<br><br>
+  cin >> m;<br><br>
+  cout <<"\nEDGES \n";<br>
+  for(k=1; k<=m; k++)<br>
+  {<br>
+      cin >>i>>j;<br>
+      cost[i][j]=1;<br>
+  }<br>
+  cout <<"Enter initial vertex to traverse from:";<br>
+  cin >>v;<br>
+  cout <<"Visitied vertices:";<br>
+ cout <<v<<" ";<br>
+ visited[v]=1;<br>
+ k=1;<br>
+ while(k<n)<br>
+ {<br>
+  for(j=1; j<=n; j++)<br>
+  if(cost[v][j]!=0 && visited[j]!=1 && visit[j]!=1)<br>
+  {<br>
+  visit[j]=1;<br>
+  qu[rare++]=j;<br>
+  }<br>
+  v=qu[front++];<br>
+  cout<<v <<" ";<br>
+  k++;<br>
+  visit[v]=0;<br>
+  visited[v]=1;<br>
+  }<br>
+ return 0;<br>
 }<br>
 	
 **OUTPUT**
@@ -1975,20 +1971,19 @@ int main()<br>
     k=1;<br>
     while(k<n)<br>
     {<br>
-        for(j=n; j>=1; j--)<br>
-            if(cost[v][j]!=0 && visited[j]!=1 && visit[j]!=1)<br>
-            {<br>
-                visit[j]=1;<br>
-                stk[top]=j;<br>
-                top++;<br>
-            }<br>
-        v=stk[--top];<br>
-        cout<<v << " ";<br>
-        k++;<br>
-        visit[v]=0;<br>
-        visited[v]=1;<br>
-    }<br>
-    return 0;<br>
+    for(j=n; j>=1; j--)<br>
+    if(cost[v][j]!=0 && visited[j]!=1 && visit[j]!=1)<br>
+    {<br>
+    visit[j]=1;<br>
+    stk[top]=j;<br>
+    top++;<br>
+  }<br>
+    v=stk[--top];<br>
+    cout<<v << " ";<br>
+    k++;<br>
+    visit[v]=0;<br>
+    visited[v]=1;<br> }<br>
+return 0;<br>
 }<br>
 
 **OUTPUT**
