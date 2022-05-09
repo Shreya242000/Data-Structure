@@ -2698,4 +2698,62 @@ Tower of hanoi
        }
 
 
+Write a C++ program to count the number of connected components in an undirected graph<br>
+		#include <iostream><br>
+		#include <list><br>
+		using namespace std;<br>
+		class Graph {<br>
+		int V; <br>
+		list<int>* adj;<br>
+		void DFSUtil(int v, bool visited[]);<br>
+		public:<br>
+		Graph(int V); <br>
+		~Graph();<br>
+		void addEdge(int v, int w);<br>
+		void connectedComponents();<br>
+		};<br>
+		void Graph::connectedComponents()<br>
+		{<br>
+		bool* visited = new bool[V];<br>
+		for (int v = 0; v < V; v++)<br>
+		visited[v] = false;<br>
+		for (int v = 0; v < V; v++) {<br>
+		if (visited[v] == false) {
+		DFSUtil(v, visited);<br>
+		cout << "\n";<br>
+		}<br>
+		}<br>
+		delete[] visited;<br>
+		}<br>
+		void Graph::DFSUtil(int v, bool visited[])<br>
+		{<br>
+		visited[v] = true;<br>
+		cout << v << " ";<br>
+		list<int>::iterator i;<br>
+		for (i = adj[v].begin(); i != adj[v].end(); ++i)<br>
+		if (!visited[*i])<br>
+		
+		DFSUtil(*i, visited);<br>
+		}<br>
+		Graph::Graph(int V)<br>
+		{<br>
+		this->V = V;<br>
+		adj = new list<int>[V];<br>
+		}<br>
+		Graph::~Graph() { delete[] adj; }<br>
+		void Graph::addEdge(int v, int w)<br>
+		{<br>
+		adj[v].push_back(w);<br>
+		adj[w].push_back(v);<br>
+		}<br>
+		int main()<br>
+		{<br>
+		Graph g(5); <br>
+		g.addEdge(1, 0);<br>
+		g.addEdge(2, 3);<br>
+		g.addEdge(3, 4);<br>
+		cout << "Following are connected components \n";<br>
+		g.connectedComponents();<br>
+		return 0;<br>
+		}<br>
 
